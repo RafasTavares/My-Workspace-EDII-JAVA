@@ -123,12 +123,4 @@ public class ArvoreAvl {
 		}
 	}
 
-	public static void MostrarPreOrdem(Arvore aux){
-		
-		if(aux != null){
-			System.out.println(aux.num + "  ");
-			MostrarPreOrdem(aux.esq);
-			MostrarPreOrdem(aux.dir);
-		}
-	}
 }
