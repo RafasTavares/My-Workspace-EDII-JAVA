@@ -113,14 +113,25 @@ public class ArvoreAvl {
 
 		return achou;
 	}
-
-	public static void MostrarOrdem(Arvore aux) {
-
-		if (aux != null) {
-			MostrarOrdem(aux.esq);
-			System.out.println(aux.num + "  ");
-			MostrarOrdem(aux.dir);
-		}
-	}
-
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

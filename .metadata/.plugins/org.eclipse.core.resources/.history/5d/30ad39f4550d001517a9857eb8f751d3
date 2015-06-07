@@ -108,19 +108,10 @@ public class ArvoreAvl {
 			}
 		} else if (num < aux.num) {
 			achou = Consultar(aux.esq, num, achou);
-		} else
+		} else {
 			achou = Consultar(aux.dir, num, achou);
+		}
 
 		return achou;
 	}
-
-	public static void MostrarOrdem(Arvore aux) {
-
-		if (aux != null) {
-			MostrarOrdem(aux.esq);
-			System.out.println(aux.num + "  ");
-			MostrarOrdem(aux.dir);
-		}
-	}
-
 }
