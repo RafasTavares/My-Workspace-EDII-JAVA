@@ -1,0 +1,18 @@
+package principal;
+
+public class ArvoreAvl {
+
+	public static Arvore Inserir(Arvore aux, int num){
+		Arvore novo; // obj auxiliar
+		if (aux == null){
+			
+			novo = new Arvore();
+		novo.num = num;
+		novo.altd = 0;
+		novo.alte = 0;
+		novo.esq = null;
+		novo.dir = null;
+		}
+		return null;
+	}
+}

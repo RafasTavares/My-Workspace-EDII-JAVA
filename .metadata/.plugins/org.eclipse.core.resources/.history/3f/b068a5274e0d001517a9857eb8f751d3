@@ -1,0 +1,29 @@
+package principal;
+
+public class ArvoreAvl {
+
+	public static Arvore Inserir(Arvore aux, int num) {
+		Arvore novo; // obj auxiliar
+		if (aux == null) {
+
+			novo = new Arvore();
+			novo.num = num;
+			novo.altd = 0;
+			novo.alte = 0;
+			novo.esq = null;
+			novo.dir = null;
+			aux = novo;
+		}else if(num < aux.num){
+			aux.esq = Inserir(aux.esq, num);
+			if(aux.esq.altd > aux.esq.alte){
+				aux.alte = aux.esq.altd + 1;
+			}else aux.alte = aux.esq.alte + 1;
+			aux = Balanceamneto(aux);
+			
+		}
+		return null;
+	}
+	public static Arvore Balanceamneto(Arvore aux){
+		return null;
+	}
+}

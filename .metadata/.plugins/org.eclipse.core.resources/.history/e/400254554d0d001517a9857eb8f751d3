@@ -1,0 +1,8 @@
+package principal;
+
+public class ArvoreAvl {
+
+	Arvore raiz = null;
+	Arvore aux;
+	Arvore aux1;
+}

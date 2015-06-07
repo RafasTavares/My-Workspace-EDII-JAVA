@@ -1,0 +1,62 @@
+package principal;
+
+public class ArvoreAvl {
+
+	public static Arvore Inserir(Arvore aux, int num) {
+		Arvore novo; // obj auxiliar
+		if (aux == null) {
+
+			novo = new Arvore();
+			novo.num = num;
+			novo.altd = 0;
+			novo.alte = 0;
+			novo.esq = null;
+			novo.dir = null;
+			aux = novo;
+		} else if (num < aux.num) {
+			aux.esq = Inserir(aux.esq, num);
+			if (aux.esq.altd > aux.esq.alte) {
+				aux.alte = aux.esq.altd + 1;
+			} else
+				aux.alte = aux.esq.alte + 1;
+			aux = Balanceamneto(aux);
+
+		} else {
+			aux.dir = Inserir(aux.dir, num);
+			if (aux.dir.altd > aux.dir.alte) {
+				aux.altd = aux.dir.altd + 1;
+			} else
+				aux.altd = aux.dir.alte + 1;
+			aux = Balanceamneto(aux);
+		}
+		return aux;
+	}
+
+	public static Arvore Balanceamneto(Arvore aux) {
+		int d, dif;
+		d = aux.altd = aux.alte;
+		if (d == 2){
+			dif = aux.dir.altd = aux.dir.alte;
+			if(dif >= 0){
+			aux = RotacaoEsquerda(aux);	
+			}else{
+				aux.dir = RotacaoDireita(aux.dir);
+				aux = RotacaoEsquerda(aux);
+			}
+		}else if(d == -2){
+			dif = aux.esq.altd - aux.esq.alte;
+			if(dif <= 0)
+			{
+				aux = RotacaoDireita(aux);
+			}else{
+				aux.esq = RotacaoEsquerda(aux.esq);
+				aux = RotacaoDireita(aux);
+			}
+		}
+		return aux;
+}
+
+	public static Arvore RotacaoEsquerda(Arvore aux) {return null;}
+
+	public static Arvore RotacaoDireita(Arvore aux) {return null;}
+}
