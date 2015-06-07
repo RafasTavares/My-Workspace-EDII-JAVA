@@ -165,11 +165,12 @@ public class ArvoreAvl {
 				p.esq = aux.esq;
 				return p2;
 			}
-		} else if (aux.num < num) {
-			aux.dir = Remover(aux.dir, num);
-		} else {
-			aux.esq = Remover(aux.esq, num);
 		}
+		else if(aux.num < num)
+			aux.dir = Remover(aux.dir, num);
+			else
+				aux.esq = Remover(aux.esq, num);
+		
 		return null;
 	}
 }

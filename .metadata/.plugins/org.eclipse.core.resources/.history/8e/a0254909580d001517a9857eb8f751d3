@@ -141,35 +141,14 @@ public class ArvoreAvl {
 			System.out.println(aux.num + "  ");
 		}
 	}
-
-	public static Arvore Remover(Arvore aux, int num) {
-
+	
+	public static void Remover(Arvore aux , int num){
+		
 		Arvore p, p2;
-		if (aux.num == num) {
-			if (aux.esq == aux.dir) {
-				// o elemento a ser removido nao pode ser removido
-				return null;
-			} else if (aux.esq == null) {
-				// o elemento a ser removido nao tem filho a esquerda
-				return aux.dir;
-			} else if (aux.dir == null) {
-				// o elemento a ser removido nao tem filho a esquerda
-				return aux.esq;
-			} else {
-				// o elemento a ser removido tem filhos para ambos os lados
-				p2 = aux.dir;
-				p = aux.dir;
-				while (p.esq != null) {
-					p = p.esq;
-				}
-				p.esq = aux.esq;
-				return p2;
+		if(aux.num == num){
+			if(aux.dir == aux.esq){
+				
 			}
-		} else if (aux.num < num) {
-			aux.dir = Remover(aux.dir, num);
-		} else {
-			aux.esq = Remover(aux.esq, num);
 		}
-		return null;
 	}
 }
