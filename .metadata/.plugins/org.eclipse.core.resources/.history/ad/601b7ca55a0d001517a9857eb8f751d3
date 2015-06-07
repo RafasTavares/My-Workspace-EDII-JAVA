@@ -178,22 +178,13 @@ public class ArvoreAvl {
 			aux.esq = Atualiza(aux.esq);
 			if (aux.esq == null)
 				aux.alte = 0;
-			else if (aux.esq.alte > aux.esq.altd) {
+			else if (aux.esq.alte > aux.esq.altd){
 				aux.alte = aux.esq.alte + 1;
-			} else {
-				aux.alte = aux.esq.altd + 1;
+				else
+					aux.alte = aux.esq.altd + 1;
 			}
-			aux.dir = Atualiza(aux.dir);
-
-			if (aux.dir == null)
-				aux.altd = 0;
-			else if (aux.dir.alte > aux.dir.altd) {
-				aux.altd = aux.dir.alte + 1;
-			} else {
-				aux.altd = aux.dir.altd + 1;
-			}
-			aux = Balanceamneto(aux);
 		}
+
 		return aux;
 	}
 }

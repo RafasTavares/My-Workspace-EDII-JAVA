@@ -192,8 +192,8 @@ public class ArvoreAvl {
 			} else {
 				aux.altd = aux.dir.altd + 1;
 			}
-			aux = Balanceamneto(aux);
 		}
+
 		return aux;
 	}
 }

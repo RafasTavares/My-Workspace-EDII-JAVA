@@ -194,6 +194,7 @@ public class ArvoreAvl {
 			}
 			aux = Balanceamneto(aux);
 		}
+
 		return aux;
 	}
 }
