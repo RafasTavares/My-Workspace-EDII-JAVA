@@ -1,0 +1,16 @@
+package principal;
+
+public class ArvoreBinaria {
+	
+	Arvore raiz = null;
+	Arvore aux;
+	Arvore aux1;
+	Arvore novo;
+	Arvore anterior;
+	Node topo;
+	Node auz_pilha;
+	
+	public void InserirElemento(int elemento) {
+	}
+
+}

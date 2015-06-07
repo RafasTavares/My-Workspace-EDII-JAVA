@@ -1,0 +1,40 @@
+package principal;
+
+public class ArvoreBinaria {
+
+	Arvore raiz = null;
+	Arvore aux;
+	Arvore aux1;
+	Arvore novo;
+	Arvore anterior;
+	Node topo;
+	Node auz_pilha;
+
+	public void InserirElemento(int elemento) {
+		if(raiz == null){
+			novo.num = elemento
+					novo.dir = null;
+			novo.esq = null;
+			raiz = novo;
+		}else {}
+	}
+
+	public void RemoverElemento(int elemento) {
+	}
+
+	public void ConsultarNo() {
+	}
+
+	public void ConsultarOrdem() {
+	}
+
+	public void ConsultarPreOrdem() {
+	}
+
+	public void ConusltarPosOrdem() {
+	}
+
+	public void Esvaziararvore() {
+	}
+
+}

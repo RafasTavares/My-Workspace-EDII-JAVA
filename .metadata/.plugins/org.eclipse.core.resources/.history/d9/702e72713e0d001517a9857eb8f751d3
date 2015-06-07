@@ -1,0 +1,36 @@
+package principal;
+
+import java.util.Scanner;
+
+public class ArvoreBinariaNRecursiva {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+
+		// Arvore vazia o objeto é null
+		Arvore raiz = null;
+		Arvore aux;
+		Arvore aux1;
+		Arvore novo;
+		Arvore anterior;
+		// Topo da pilha
+		Node topo;
+		Node auz_pilha;
+
+		int op = 0, achou, numero;
+
+		do {
+			System.out.println("Opções");
+			System.out.println("1 - Inserir na ávore");
+			System.out.println("2 - Consultar um nó da árvore");
+			System.out.println("3 - Consultar árvore em ordem");
+			System.out.println("4 - Consultar árvore em pré ordem");
+			System.out.println("5 - Consultar árvore em pos ordem");
+			System.out.println("6 - Consultar nó da árvore");
+			System.out.println("7 - Esvaziar a árvore");
+			System.out.println("8 - Sair");
+			System.out.println("Digite uma opção: ");
+		} while (op != 8);
+	}
+
+}

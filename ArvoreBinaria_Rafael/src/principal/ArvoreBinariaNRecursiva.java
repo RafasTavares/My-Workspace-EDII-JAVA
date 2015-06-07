@@ -17,19 +17,42 @@ public class ArvoreBinariaNRecursiva {
 		Node topo;
 		Node auz_pilha;
 
-		int op, achou, numero;
+		int op = 0, achou, numero;
 
 		do {
 			System.out.println("Opções");
-			System.out.println("1 - Inserir na Arvore");
-			System.out.println("2 - ");
-			System.out.println("3 - ");
-			System.out.println("4 - ");
-			System.out.println("5 - ");
-			System.out.println("6 - ");
-			System.out.println("7 - ");
-			System.out.println("8 - ");
+			System.out.println("1 - Inserir na ávore");
+			System.out.println("2 - Consultar um nó da árvore");
+			System.out.println("3 - Consultar árvore em ordem");
+			System.out.println("4 - Consultar árvore em pré ordem");
+			System.out.println("5 - Consultar árvore em pos ordem");
+			System.out.println("6 - Remover nó da árvore");
+			System.out.println("7 - Esvaziar a árvore");
+			System.out.println("8 - Sair");
+			System.out.println("Digite uma opção: ");
+			op = entrada.nextInt();
+
+			switch (op) {
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+			case 7:
+				break;
+			case 8:
+				break;
+			default:
+				System.out.println("Opção inválida!");
+				break;
+			}
 		} while (op != 8);
 	}
-
 }
