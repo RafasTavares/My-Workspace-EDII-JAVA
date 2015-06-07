@@ -44,9 +44,9 @@ public class ArvoreAvl {
 				aux = RotacaoEsquerda(aux);
 			}
 		} else if (d == -2) {
-
+			
 			dif = aux.esq.altd - aux.esq.alte;
-
+			
 			if (dif <= 0) {
 				aux = RotacaoDireita(aux);
 			} else {
@@ -58,28 +58,10 @@ public class ArvoreAvl {
 	}
 
 	public static Arvore RotacaoEsquerda(Arvore aux) {
-		Arvore aux1, aux2;
-		aux1 = aux.dir;
-		aux2 = aux.esq;
-		aux.dir = aux2;
-		aux1.esq = aux;
-
-		if (aux.dir == null)
-			aux.altd = 0;
-		else if (aux.dir.alte > aux.dir.altd)
-			aux.altd = aux.dir.alte + 1;
-		else
-			aux.altd = aux.dir.altd + 1;
-
-		if (aux1.esq.alte > aux1.esq.altd)
-			aux1.alte = aux1.esq.alte + 1;
-		else
-			aux1.alte = aux1.esq.alte + 1;
-
-		return aux1;
+		return null;
 	}
 
 	public static Arvore RotacaoDireita(Arvore aux) {
-		return aux;
+		return null;
 	}
 }

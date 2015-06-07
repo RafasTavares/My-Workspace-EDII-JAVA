@@ -35,51 +35,28 @@ public class ArvoreAvl {
 	public static Arvore Balanceamneto(Arvore aux) {
 		int d, dif;
 		d = aux.altd = aux.alte;
-		if (d == 2) {
+		if (d == 2){
 			dif = aux.dir.altd = aux.dir.alte;
-			if (dif >= 0) {
-				aux = RotacaoEsquerda(aux);
-			} else {
+			if(dif >= 0){
+			aux = RotacaoEsquerda(aux);	
+			}else{
 				aux.dir = RotacaoDireita(aux.dir);
 				aux = RotacaoEsquerda(aux);
 			}
-		} else if (d == -2) {
-
+		}else if(d == -2){
 			dif = aux.esq.altd - aux.esq.alte;
-
-			if (dif <= 0) {
+			if(dif <= 0)
+			{
 				aux = RotacaoDireita(aux);
-			} else {
+			}else{
 				aux.esq = RotacaoEsquerda(aux.esq);
 				aux = RotacaoDireita(aux);
 			}
 		}
 		return aux;
-	}
+}
 
-	public static Arvore RotacaoEsquerda(Arvore aux) {
-		Arvore aux1, aux2;
-		aux1 = aux.dir;
-		aux2 = aux.esq;
-		aux.dir = aux2;
-		aux1.esq = aux;
+	public static Arvore RotacaoEsquerda(Arvore aux) {return null;}
 
-		if (aux.dir == null)
-			aux.altd = 0;
-		else if (aux.dir.alte > aux.dir.altd)
-			aux.altd = aux.dir.alte + 1;
-		else
-			aux.altd = aux.dir.altd + 1;
-
-		if (aux1.esq.alte > aux1.esq.altd)
-			aux1.alte = aux1.esq.alte + 1;
-		else
-			aux1.alte = aux1.esq.alte + 1;
-
-		return aux1;
-	}
-
-	public static Arvore RotacaoDireita(Arvore aux) {
-		return aux;
-	}
+	public static Arvore RotacaoDireita(Arvore aux) {return null;}
 }

@@ -63,7 +63,7 @@ public class ArvoreAvl {
 		aux2 = aux.esq;
 		aux.dir = aux2;
 		aux1.esq = aux;
-
+		
 		if (aux.dir == null)
 			aux.altd = 0;
 		else if (aux.dir.alte > aux.dir.altd)
