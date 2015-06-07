@@ -131,14 +131,4 @@ public class ArvoreAvl {
 			MostrarPreOrdem(aux.dir);
 		}
 	}
-	
-public static void MostrarPosOrdem(Arvore aux){
-		
-		if(aux != null){
-			
-			MostrarPosOrdem(aux.esq);
-			MostrarPosOrdem(aux.dir);
-			System.out.println(aux.num + "  ");
-		}
-	}
 }
