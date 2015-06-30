@@ -1,0 +1,23 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import principal.Arvore;
+import principal.ArvoreAvl;
+
+public class test {
+
+	@Test
+	public void test() {
+		Arvore a = new Arvore();
+		ArvoreAvl.Inserir(a, 1);
+		ArvoreAvl.Inserir(a, 5);
+		ArvoreAvl.Inserir(a, 4);
+		ArvoreAvl.Inserir(a, 3);
+		ArvoreAvl.Inserir(a, 2);
+		ArvoreAvl.MostrarPosOrdem(a);
+	}
+
+}
